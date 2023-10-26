@@ -9,5 +9,6 @@ namespace MyVampireSurvivor.Components
     {
         public float moveSpeed;
         public float attackRate;
+        public Entity entity;
     }
 }

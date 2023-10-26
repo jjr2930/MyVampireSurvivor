@@ -20,7 +20,8 @@ namespace MyVampireSurvivor.Authorings
 			AddComponent(entity, new EnemyComponent()
 			{
 				moveSpeed = authoring.moveSpeed,
-				attackRate = authoring.attackSpeed
+				attackRate = authoring.attackSpeed,
+				entity = entity
 			});
         }
     }

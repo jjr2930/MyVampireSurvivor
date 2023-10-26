@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using Unity.Entities;
 using Unity.Transforms;
-using UnityEngine;
 using MyVampireSurvivor.Components;
 using Unity.Mathematics;
 using Unity.Burst;
+using Pathfinding.Components;
 
 namespace MyVampireSurvivor.Aspects
 {
@@ -19,8 +17,8 @@ namespace MyVampireSurvivor.Aspects
         private readonly RefRO<EnemyComponent> enemyComponent;
 
         [BurstCompile]
-        public void Move(float deltaTime, in float4 playerWorldPosition)
-        {
+        public void Move(float deltaTime, in float4 playerWorldPosition, in DynamicBuffer<PathBuffer> paths)
+        {            
             var enemyWorldToLocal = math.inverse(enemyLocalToWorld.ValueRO.Value);
             var playerPositionRelatedEnmey = math.mul(enemyWorldToLocal, playerWorldPosition);
             var toPlayer = playerPositionRelatedEnmey - enemyLocalToWorld.ValueRO.Value.c3;

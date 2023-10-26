@@ -1,32 +1,31 @@
-using Unity.Burst;
-using Unity.Collections;
+using MyVampireSurvivor.Components;
+using Pathfinding.Aspects;
 using Unity.Entities;
 using Unity.Transforms;
-using Unity.AI;
+using UnityEngine;
 
 namespace MyVampireSurvivor.Systems
 {
-    [BurstCompile]
     [UpdateAfter(typeof(Spawner))]
     public partial struct PathfindingSystem : ISystem
     {
-        [BurstCompile]
-        public void OnUpdate(ref SystemState state)
-        { 
-
-        }
-    }
-
-    [BurstCompile]
-    public partial struct PathfindingJob : IJobEntity
-    {
-        [ReadOnly] public LocalToWorld targetLocalToWorldTransform;
-        [ReadOnly] public float elapsedTime;
-
-        [BurstCompile]
-        void Execute(in LocalTransform localTransform)
+        public void OnUpdate(ref SystemState state) 
         {
+            var playerEntity = SystemAPI.GetSingletonEntity<PlayerComponent>();
+            var playerLocaltoWorld = SystemAPI.GetComponent<LocalToWorld>(playerEntity);
+            var elapsedTime = SystemAPI.Time.ElapsedTime;
 
+            foreach (var ( localToWorld, pathfindingOption ) in SystemAPI.Query<RefRW<LocalToWorld>, RefRW<PathfindingOption>>())
+            {
+                var lastTime = pathfindingOption.ValueRO.lastTime;
+                var shouldRefresh = elapsedTime - lastTime >= pathfindingOption.ValueRO.lastTime;
+                if (shouldRefresh)
+                {
+                    var path = SystemAPI.GetAspect<PathfinderAspect>(pathfindingOption.ValueRO.entity);
+                    path.FindPath(localToWorld.ValueRO.Position, playerLocaltoWorld.Position);
+                    pathfindingOption.ValueRW.lastTime = (float)elapsedTime;
+                }                
+            }    
         }
     }
 }
