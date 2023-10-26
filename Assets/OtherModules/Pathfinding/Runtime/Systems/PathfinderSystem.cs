@@ -119,7 +119,7 @@ namespace Pathfinding.Systems
                 pathRequests = requests.requests.AsParallelReader(),
                 inProgress = _inProgress,
                 results = results.results.AsParallelWriter()
-                //}.ScheduleParallel(MAX_WORKERS, 1, state.Dependency);
+            //}.ScheduleParallel(JobsUtility.JobWorkerCount, 1, clear);
             }.Schedule(JobsUtility.JobWorkerCount, clearHandle);
         }
 

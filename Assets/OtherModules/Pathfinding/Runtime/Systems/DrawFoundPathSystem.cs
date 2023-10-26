@@ -1,4 +1,4 @@
-﻿using Pathfinding.Components;
+using Pathfinding.Components;
 using Unity.Burst;
 using Unity.Entities;
 using Unity.Mathematics;

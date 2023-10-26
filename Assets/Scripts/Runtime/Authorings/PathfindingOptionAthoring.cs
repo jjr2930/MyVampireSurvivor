@@ -17,7 +17,7 @@ namespace MyVampireSurvivor.Authorings
         public override void Bake(PathfindingOptionAthoring authoring)
         {
             var entity = GetEntity(TransformUsageFlags.Dynamic);
-            AddComponent(entity, new PathfindingOption()
+            AddComponent(entity, new PathfindingInfo()
             {
                 interval = authoring.interval,
                 entity = entity

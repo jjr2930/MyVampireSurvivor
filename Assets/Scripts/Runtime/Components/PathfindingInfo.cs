@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace MyVampireSurvivor.Components
 {
-    public partial struct PathfindingOption : IComponentData
+    public partial struct PathfindingInfo : IComponentData
     {
         /// <summary>
         /// 몇 초에 한 번씩 갱신할지

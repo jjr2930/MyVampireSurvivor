@@ -228,8 +228,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aef228688bdff9e4d9ecbc22ba1723d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1
-  attackSpeed: 5
+  moveSpeed: 5
+  offset: {x: 0, y: 1, z: 0}
+  stopDistance: 0.1
 --- !u!114 &663625509524812017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,4 +257,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 045d6d6ad9dec5541bad040a1556398b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interval: 1
+  interval: 0.1
