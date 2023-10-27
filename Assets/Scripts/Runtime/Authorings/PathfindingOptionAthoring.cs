@@ -20,7 +20,8 @@ namespace MyVampireSurvivor.Authorings
             AddComponent(entity, new PathfindingInfo()
             {
                 interval = authoring.interval,
-                entity = entity
+                entity = entity,
+                lastTime = Time.time
             }) ;
         }
     }

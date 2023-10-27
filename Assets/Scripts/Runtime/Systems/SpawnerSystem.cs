@@ -19,19 +19,16 @@ namespace MyVampireSurvivor.Systems
         }
         public void OnUpdate(ref SystemState state)
         {
-            foreach (var spanwer in SystemAPI.Query<RefRW<SpanwerComponent>>())
+            foreach (var spwaner in SystemAPI.Query<RefRW<SpanwerComponent>>())
             {
-                if (SystemAPI.Time.ElapsedTime % 5f > 1f)
-                    continue;
-
-                if(count < 1024 * 10)
+                if(count < 10000)
                 {
-                    for(int i = 0; i< 128; i++) 
+                    for(int i = 0; i< 10000; i++) 
                     {
                         count++;
 
                         var randomPoint = GetRandomPoint(new float3(0f, 1f, 0f), 20);
-                        Entity newEntity = state.EntityManager.Instantiate(spanwer.ValueRW.prefab);
+                        Entity newEntity = state.EntityManager.Instantiate(spwaner.ValueRW.prefab);
                         state.EntityManager.SetComponentData(newEntity, LocalTransform.FromPosition(randomPoint));
                     }
                 }
