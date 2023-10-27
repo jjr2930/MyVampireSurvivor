@@ -9,6 +9,8 @@ namespace MyVampireSurvivor.Authorings
 {
 	public class NavMeshAgentAuthoring : MonoBehaviour
 	{
+		public float minSpeed;
+		public float maxSpeed;
 		public float moveSpeed;
 		public Vector3 offset;
 		public float stopDistance;
@@ -18,10 +20,12 @@ namespace MyVampireSurvivor.Authorings
 	{
         public override void Bake(NavMeshAgentAuthoring authoring)
         {
+			float randomSpeed = UnityEngine.Random.Range(authoring.minSpeed, authoring.maxSpeed);
+
 			var entity = GetEntity(TransformUsageFlags.Dynamic);
 			AddComponent(entity, new NavMeshAgentInfo()
 			{
-				moveSpeed = authoring.moveSpeed,
+				moveSpeed = randomSpeed,
 				stopDistance = authoring.stopDistance,
 				offset = authoring.offset,
 			}) ;

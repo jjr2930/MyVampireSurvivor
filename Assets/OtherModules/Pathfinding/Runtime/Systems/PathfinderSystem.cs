@@ -23,7 +23,7 @@ namespace Pathfinding.Systems
             public PathQuery* pathQuery;
         }
 
-        private const int QueryMaxCount = 100;
+        private const int QueryMaxCount = 1024;
         private const int PathMaxSize = 512;
         private const int MaxPathQueueNodes = 4096;
 
@@ -69,7 +69,8 @@ namespace Pathfinding.Systems
                 results = _pathResults
             });
 
-            var maxWorkers = JobsUtility.JobWorkerMaximumCount;
+            //var maxWorkers = JobsUtility.JobWorkerMaximumCount;
+            var maxWorkers = 1024;
             _queries = new NativeArray<NavMeshQuery>(maxWorkers, Allocator.Persistent);
 
             for (var i = 0; i < maxWorkers; i++)
@@ -120,7 +121,7 @@ namespace Pathfinding.Systems
                 inProgress = _inProgress,
                 results = results.results.AsParallelWriter()
             //}.ScheduleParallel(JobsUtility.JobWorkerCount, 1, clear);
-            }.Schedule(JobsUtility.JobWorkerCount, clearHandle);
+            }.Schedule(1024, clearHandle);
         }
 
         [BurstCompile]

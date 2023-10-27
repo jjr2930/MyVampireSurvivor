@@ -7,6 +7,9 @@ using Pathfinding.Components;
 using UnityEngine;
 using System.Text;
 using Unity.VisualScripting;
+using UnityEngine.UI;
+using UnityEngine.AI;
+using UnityEngine.Experimental.AI;
 
 namespace MyVampireSurvivor.Aspects
 {
@@ -36,13 +39,14 @@ namespace MyVampireSurvivor.Aspects
                 case NavMeshAgentInfo.MovingState.Finsihed:
                     {
                         navMeshAgentInfo.ValueRW.state = NavMeshAgentInfo.MovingState.Moving;
+                        //paths.RemoveAt(0);
                     }
                     break;
 
                 case NavMeshAgentInfo.MovingState.Moving:
                     {
                         var offset = navMeshAgentInfo.ValueRO.offset;
-                        var currentPosition = agentLocalToWorld.ValueRO.Position; // - offset;
+                        var currentPosition = agentLocalToWorld.ValueRO.Position - offset;
                         var currentTargetPosition = paths[0];
                         var toTarget = currentTargetPosition.position - currentPosition;
                         var length = math.length(toTarget);
@@ -60,8 +64,8 @@ namespace MyVampireSurvivor.Aspects
                             var moveSpeed = navMeshAgentInfo.ValueRO.moveSpeed;
                             var worldToLocal = math.inverse(agentLocalToWorld.ValueRO.Value);
                             var nextPosition = currentPosition + (toTarget * deltaTime * moveSpeed);
-                            //nextPosition += offset;
-                            agentLocalTransform.ValueRW.Position = MathUtility.MultiplyWithPoint(worldToLocal, nextPosition);
+                            nextPosition += offset;
+                            agentLocalTransform.ValueRW.Position = MathUtility.MultiplyWithPoint(worldToLocal, nextPosition);                            
                         }
                     }
                     break;
