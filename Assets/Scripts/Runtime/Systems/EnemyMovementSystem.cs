@@ -8,6 +8,7 @@ using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
 using Unity.Mathematics;
+using Unity.Physics;
 using Unity.Transforms;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -28,7 +29,7 @@ namespace MyVampireSurvivor.Systems
             new MovementJob
             {
                 deltaTime = SystemAPI.Time.DeltaTime,
-                playerWorldPosition = playerLocalToWorld.Value.c3,
+                playerWorldPosition = playerLocalToWorld.Position,
             }.ScheduleParallel();
         }
     }
@@ -36,12 +37,12 @@ namespace MyVampireSurvivor.Systems
     [BurstCompile]
     public partial struct MovementJob : IJobEntity
     {
-        [ReadOnly] public float4 playerWorldPosition;
+        [ReadOnly] public float3 playerWorldPosition;
         [ReadOnly] public float deltaTime;
         
-        void Execute(NavMeshAgentAspect enemyMovementAspect )
+        void Execute(EnemyMovementAspect enemyMovementAspect )
         {
-            enemyMovementAspect.Move(deltaTime, playerWorldPosition);
+            enemyMovementAspect.Move(ref playerWorldPosition, deltaTime);
         }
     } 
 }

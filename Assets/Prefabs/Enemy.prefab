@@ -117,9 +117,7 @@ GameObject:
   - component: {fileID: 1158178628273512318}
   - component: {fileID: 3904639475283285795}
   - component: {fileID: 4739777758160858987}
-  - component: {fileID: -4090513059344052440}
-  - component: {fileID: 663625509524812017}
-  - component: {fileID: -6163027346297001600}
+  - component: {fileID: -6164534829976678894}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -216,7 +214,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-4090513059344052440
+--- !u!114 &-6164534829976678894
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -225,38 +223,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1458988526731657040}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aef228688bdff9e4d9ecbc22ba1723d7, type: 3}
+  m_Script: {fileID: 11500000, guid: 9d0c22bb6c5ef1640b3a34ee8434adc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpeed: 1
-  maxSpeed: 10
-  moveSpeed: 5
-  offset: {x: 0, y: 1, z: 0}
+  movementSpeed: 5
   stopDistance: 0.1
---- !u!114 &663625509524812017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1458988526731657040}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8e33fd1df54458cb8245363b1815b44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minDistance: 1
-  agentId: 0
---- !u!114 &-6163027346297001600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1458988526731657040}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 045d6d6ad9dec5541bad040a1556398b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interval: 2
