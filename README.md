@@ -3,6 +3,7 @@ Practice for DOTS <br>
 Doing Features
 + user input
 + enemy movement using navigation mesh
+  + collision checking
 
 Todo Features
 + Item
@@ -21,3 +22,4 @@ Todo Features
 + projectile
 
 + multiplay
+<img width="600" height="400" src="https://github.com/jjr2930/MyVampireSurvivor/blob/main/ReadmeResources/20231027.gif?raw=true"/>
