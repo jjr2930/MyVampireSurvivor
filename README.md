@@ -22,7 +22,7 @@ Todo Features
 + projectile
 
 + multiplay
-<img width="600" height="400" src="https://github.com/jjr2930/MyVampireSurvivor/blob/main/ReadmeResources/20231027.gif?raw=true"/>
+<img width="600" height="400" src="https://github.com/jjr2930/MyVampireSurvivor/blob/main/ReadmeResources/20231027.gif"/>
 
 + 2023.11.07
-<img width="600" height="300" src="https://github.com/jjr2930/MyVampireSurvivor/blob/main/ReadmeResources/Projectile.gif?raw=true"/>
+<img width="600" height="300" src="https://github.com/jjr2930/MyVampireSurvivor/blob/main/ReadmeResources/Projectile.gif"/>
