@@ -117,7 +117,9 @@ GameObject:
   - component: {fileID: 1158178628273512318}
   - component: {fileID: 3904639475283285795}
   - component: {fileID: 4739777758160858987}
-  - component: {fileID: -6164534829976678894}
+  - component: {fileID: -7730825871917661265}
+  - component: {fileID: -8563398804978669}
+  - component: {fileID: 1539503656927618153}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -214,7 +216,20 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-6164534829976678894
+--- !u!114 &-7730825871917661265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458988526731657040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36ea0459634050946b6964d2b349cf0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tag: 2
+--- !u!114 &-8563398804978669
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -226,5 +241,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d0c22bb6c5ef1640b3a34ee8434adc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 5
+  movementSpeed: 2
   stopDistance: 0.1
+--- !u!114 &1539503656927618153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458988526731657040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a7c4fd6c9a92940b3125b30dc8df24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startHp: 3

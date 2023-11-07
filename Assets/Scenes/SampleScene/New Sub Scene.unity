@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 240598791}
   - component: {fileID: 240598790}
   - component: {fileID: 240598795}
+  - component: {fileID: 240598796}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -260,6 +261,21 @@ MonoBehaviour:
   spawnDelay: 1
   projectilePrefab: {fileID: 2364237351799338487, guid: ea7789efcdf899c4dbf820dd9101b650,
     type: 3}
+  targetTag: 0
+  searchingRadius: 100
+--- !u!114 &240598796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 240598789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36ea0459634050946b6964d2b349cf0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tag: 1
 --- !u!1 &710616588
 GameObject:
   m_ObjectHideFlags: 0

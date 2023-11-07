@@ -10,6 +10,8 @@ namespace MyVampireSurvivor.Authorings
     {
         public float spawnDelay = 0.1f;
         public GameObject projectilePrefab = null;
+        public ObjectTag targetTag;
+        public float searchingRadius = 10f;
     }
 
     public class ProjectileSpawningBaker : Baker<ProjectileSpawningAuthoring>
@@ -21,7 +23,9 @@ namespace MyVampireSurvivor.Authorings
             {
                 spawningDelay = authoring.spawnDelay,
                 nextSpawnTime = 0f,
-                projectilePrefab = GetEntity(authoring.projectilePrefab, TransformUsageFlags.Dynamic)
+                projectilePrefab = GetEntity(authoring.projectilePrefab, TransformUsageFlags.Dynamic),
+                targetTag = authoring.targetTag,
+                targetSearchingRadius = authoring.searchingRadius,
             });
         }
     }

@@ -10,19 +10,34 @@ namespace MyVampireSurvivor.Systems
 {
     public partial struct Spawner : ISystem
     {
+        int spawned;
         Unity.Mathematics.Random random;
         public void OnCreate(ref SystemState state)
         {
             random = new Unity.Mathematics.Random(2484);
+
+            spawned = 0;
+            //foreach (var spwaner in SystemAPI.Query<RefRW<SpanwerComponent>>())
+            //{
+            //    var randomPoint = GetRandomPoint(new float3(0f, 1f, 0f), 20);
+            //    Entity newEntity = state.EntityManager.Instantiate(spwaner.ValueRW.prefab);
+            //    state.EntityManager.SetComponentData(newEntity, LocalTransform.FromPosition(randomPoint));
+            //}
         }
+
+        
         public void OnUpdate(ref SystemState state)
         {
-            return;
+            if (spawned == 1)
+                return;
+
             foreach (var spwaner in SystemAPI.Query<RefRW<SpanwerComponent>>())
             {
                 var randomPoint = GetRandomPoint(new float3(0f, 1f, 0f), 20);
                 Entity newEntity = state.EntityManager.Instantiate(spwaner.ValueRW.prefab);
                 state.EntityManager.SetComponentData(newEntity, LocalTransform.FromPosition(randomPoint));
+
+                spawned++;
             }
         }
 

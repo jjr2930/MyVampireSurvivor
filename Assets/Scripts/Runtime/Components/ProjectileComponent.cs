@@ -10,6 +10,8 @@ namespace MyVampireSurvivor.Components
         public float movementSpeed;
         public float guideValue;
         public Entity targetEntity;
+        //public ComponentLookup<LocalTransform> localTransformLookup;
+        //public ComponentLookup<LocalToWorld> localToWorldLookup;
         //public ComponentLookup<LocalTransform> lookup;
         //public RefRO<LocalTransform> targetLocalTransformReference;
         //public RefRO<LocalToWorld> targetLocalToWorldReference;
