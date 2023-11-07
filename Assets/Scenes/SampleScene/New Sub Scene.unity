@@ -133,8 +133,8 @@ GameObject:
   - component: {fileID: 240598792}
   - component: {fileID: 240598791}
   - component: {fileID: 240598790}
-  - component: {fileID: 240598795}
   - component: {fileID: 240598796}
+  - component: {fileID: 240598797}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -239,30 +239,13 @@ Transform:
   m_GameObject: {fileID: 240598789}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.94, y: 0, z: -20.59}
+  m_LocalPosition: {x: 0.03, y: 1, z: -5.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 710616589}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &240598795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 240598789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 157c278af5bd12542a1756ea74ab581a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnDelay: 1
-  projectilePrefab: {fileID: 2364237351799338487, guid: ea7789efcdf899c4dbf820dd9101b650,
-    type: 3}
-  targetTag: 0
-  searchingRadius: 100
 --- !u!114 &240598796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,6 +259,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tag: 1
+--- !u!114 &240598797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 240598789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 157c278af5bd12542a1756ea74ab581a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnDelay: 0.1
+  projectilePrefab: {fileID: 2364237351799338487, guid: ea7789efcdf899c4dbf820dd9101b650,
+    type: 3}
+  targetTag: 2
+  searchingRadius: 10
 --- !u!1 &710616588
 GameObject:
   m_ObjectHideFlags: 0

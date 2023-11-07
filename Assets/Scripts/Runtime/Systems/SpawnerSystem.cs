@@ -17,12 +17,6 @@ namespace MyVampireSurvivor.Systems
             random = new Unity.Mathematics.Random(2484);
 
             spawned = 0;
-            //foreach (var spwaner in SystemAPI.Query<RefRW<SpanwerComponent>>())
-            //{
-            //    var randomPoint = GetRandomPoint(new float3(0f, 1f, 0f), 20);
-            //    Entity newEntity = state.EntityManager.Instantiate(spwaner.ValueRW.prefab);
-            //    state.EntityManager.SetComponentData(newEntity, LocalTransform.FromPosition(randomPoint));
-            //}
         }
 
         
