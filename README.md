@@ -23,3 +23,6 @@ Todo Features
 
 + multiplay
 <img width="600" height="400" src="https://github.com/jjr2930/MyVampireSurvivor/blob/main/ReadmeResources/20231027.gif?raw=true"/>
+
++ 2023.11.07
+<img width="600" height"400" src="https://github.com/jjr2930/MyVampireSurvivor/blob/main/ReadmeResources/Projectile.gif?raw=true/>
