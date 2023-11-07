@@ -28,5 +28,7 @@ Todo Features
 ![Projectile](https://github.com/jjr2930/MyVampireSurvivor/assets/8425588/3ccd4907-8cbb-4c84-9eb3-1b776df3c078)
 <img src="https://github.com/jjr2930/MyVampireSurvivor/assets/8425588/3ccd4907-8cbb-4c84-9eb3-1b776df3c078"/>
 속도가 너무 느려서 GameObject로 개발하고 DOTS로 포팅할거다.
+![Projectile](https://github.com/jjr2930/MyVampireSurvivor/assets/8425588/6a63fc46-b59e-473a-a0c1-aa270e512c99)
+
 - GameObject github주소 </br>
 https://github.com/jjr2930/MyVampireSurvivorGO
