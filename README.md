@@ -25,7 +25,7 @@ Todo Features
 <img width="600" height="400" src="https://github.com/jjr2930/MyVampireSurvivor/blob/main/ReadmeResources/20231027.gif"/>
 
 + 2023.11.07
-<img width="600" height="300" src="https://github.com/jjr2930/MyVampireSurvivor/blob/main/ReadmeResources/Projectile.gif"/>
+<img width="600" height="300" src="https://github.com/jjr2930/MyVampireSurvivor/assets/8425588/62c3862f-da68-42f2-8b28-6ce588683621"/>
 
 속도가 너무 느려서 GameObject로 개발하고 DOTS로 포팅할거다.
 - GameObject github주소 </br>
