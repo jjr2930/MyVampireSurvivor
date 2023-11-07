@@ -26,3 +26,7 @@ Todo Features
 
 + 2023.11.07
 <img width="600" height="300" src="https://github.com/jjr2930/MyVampireSurvivor/blob/main/ReadmeResources/Projectile.gif"/>
+
+속도가 너무 느려서 GameObject로 개발하고 DOTS로 포팅할거다.
+- GameObject github주소 </br>
+https://github.com/jjr2930/MyVampireSurvivorGO
